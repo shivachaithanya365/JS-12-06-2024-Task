@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>DIGITAL-CLOCK</title>
+</head>
+
+<body>
+    <h1 style="text-align: center;">DIGITAL-CLOCK</h1>
+    <div id="clock"></div>
+    <h1 id="hour"></h1>
+    <h1 id="min"></h1>
+    <h1 id="sec"></h1>
+    <h1 id="msec"></h1>
+
+
+    <script>
+        function clock() {
+            let date = new Date();
+            let clock = document.getElementById("clock");
+            let hour = date.getHours();
+            let min = date.getMinutes();
+            let sec = date.getSeconds();
+            let msec = date.getMilliseconds();
+
+
+            var hours = document.getElementById("hour");
+            var minutes = document.getElementById("min");
+            var seconds = document.getElementById("sec");
+            var milliseconds = document.getElementById("msec");
+            clock.innerHTML = hour + ":" + min + ":" + sec + ":   " + msec;
+            clock.style.textAlign = "center";
+            clock.style.fontSize = "3rem";
+            clock.style.border = "5px solid black";
+            clock.style.padding = "10px";
+            clock.style.borderRadius = "10px";
+            clock.style.width = "300px";
+            clock.style.margin = "auto";
+
+        }
+        setInterval(clock, 1000);
+    </script>
+</body>
+
+</html>

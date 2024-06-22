@@ -1,0 +1,99 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>REST/SPREAD-OPERATOR</title>
+    <style>
+        pre {
+            font-family: 'Courier New', Courier, monospace;
+            background-color: #f4f4f4;
+            padding: 10px;
+            border-radius: 5px;
+            border: 1px solid #ccc;
+            width: 40%;
+            margin: auto;
+        }
+
+        h3 {
+            text-align: center;
+        }
+    </style>
+</head>
+
+<body>
+    <h3>SOURCE CODE : </h3>
+    <pre>
+        <h3>Iterate object by using Rest operator</h3>
+
+        let obj = {
+            state: "Telangana",
+            capital: "Hyderabad",
+            population: 35000000,
+            language: "Telugu"
+        };
+
+        function object({ ...rest }) {
+            for (let key in rest) {
+                console.log(`${key}: ${rest[key]}`);
+            }
+        }
+
+        object(obj);
+
+        <h3>Iterate object by using Spread operator</h3>
+
+        obj = {
+            state: "Telangana",
+            capital: "Hyderabad",
+            population: 35000000,
+            language: "Telugu"
+        };
+
+        function object(rest) {
+            for (let key in rest) {
+                console.log(`${key}: ${rest[key]}`);
+            }
+        }
+
+        object({ ...obj }); 
+    </pre>
+    <script>
+        // iterate object by using rest operator
+
+        let obj = {
+            state: "Telangana",
+            capital: "Hyderabad",
+            population: 35000000,
+            language: "Telugu"
+        };
+
+        function object({ ...rest }) {
+            for (let key in rest) {
+                console.log(`${key}: ${rest[key]}`);
+            }
+        }
+
+        object(obj);
+
+        // iterate object by using spread operator
+
+        obj = {
+            state: "Telangana",
+            capital: "Hyderabad",
+            population: 35000000,
+            language: "Telugu"
+        };
+
+        function object(rest) {
+            for (let key in rest) {
+                console.log(`${key}: ${rest[key]}`);
+            }
+        }
+
+        object({ ...obj });
+    </script>
+</body>
+
+</html>
